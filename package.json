@@ -17,7 +17,11 @@
     "test": "turbo run test",
     "type-check": "turbo run type-check",
     "clean": "turbo run clean",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "audit:security": "node tools/security/quality-gate.js security-audit",
+    "audit:validate": "node tools/security/quality-gate.js validate",
+    "assets:sync": "node tools/assets/sync.mjs",
+    "postinstall": "pnpm assets:sync"
   },
   "devDependencies": {
     "turbo": "^1.10.0",

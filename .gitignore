@@ -20,6 +20,11 @@ out/
 .env.test.local
 .env.production.local
 
+# Sensitive files
+*.key
+*.pem
+config/secrets.yml
+
 # Logs
 *.log
 npm-debug.log*

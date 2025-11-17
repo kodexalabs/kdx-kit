@@ -3,6 +3,8 @@ import { FeatureGrid } from '@/components/FeatureGrid'
 import { TechStack } from '@/components/TechStack'
 import { AnimationShowcase } from '@/components/AnimationShowcase'
 import { AdvancedAnimationShowcase } from '@/components/AdvancedAnimationShowcase'
+import { KodexaLabsEffectsShowcase } from '@/components/KodexaLabsEffectsShowcase'
+import { CompleteShowcase } from '@/components/CompleteShowcase'
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <HeroSection />
       <AnimationShowcase />
       <AdvancedAnimationShowcase />
+      <KodexaLabsEffectsShowcase />
+      <CompleteShowcase />
       <FeatureGrid />
       <TechStack />
     </main>

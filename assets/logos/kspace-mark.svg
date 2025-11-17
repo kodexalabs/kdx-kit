@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390.6 450" aria-label="K-Space Logo">
+  <defs>
+    <style>
+      .logo-path {
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g>
+    <!-- Main K shape path -->
+    <path class="logo-path" d="M239.1,403.1L111.7,276.4l0,126.8H82.5L0,320.8V82.3L82.4,0h29.2l0,126.8L239,0h151.4L192.4,201.5l198.1,201.6L239.1,403.1z M111.7,255.5l51-53.9l-51-53.9l-53,53.9L111.7,255.5z"/>
+  </g>
+</svg>
+

@@ -2,6 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "PowerGrotesk";
+  src: url('/assets/fonts/PowerGrotesk-Regular.woff2') format('woff2'),
+       url('/assets/fonts/PowerGrotesk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PowerGrotesk";
+  src: url('/assets/fonts/PowerGrotesk-Medium.woff2') format('woff2'),
+       url('/assets/fonts/PowerGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PowerGrotesk";
+  src: url('/assets/fonts/PowerGrotesk-Bold.woff2') format('woff2'),
+       url('/assets/fonts/PowerGrotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PowerGrotesk";
+  src: url('/assets/fonts/PowerGrotesk-Black.woff2') format('woff2'),
+       url('/assets/fonts/PowerGrotesk-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,6 +60,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "PowerGrotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 @layer utilities {
