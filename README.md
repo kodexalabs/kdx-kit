@@ -37,6 +37,17 @@ Run these at the repository root `D:\Kodexalabs\kdx-kit`:
 - `pnpm run test` — run tests across workspaces
 - `pnpm run format` — format with Prettier
 
+## Pull Request Workflow
+- Create a feature branch: `git checkout -b feature/<name>`
+- Commit with conventional message and details
+- Push and open a PR to `main`
+- PR template auto-populates context, SCI snippets, and QA checklist
+
+## Further Reading
+- Diagnostics guide: `docs/diagnostics.md`
+- Environment setup: `docs/environment.md`
+- Code Rabbit guide: `docs/code-rabbit.md`
+
 Note: some scripts require dependencies installed (`pnpm -w install`).
 
 ## Contributing
