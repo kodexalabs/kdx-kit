@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches: [ main, feat/* ]
+  pull_request:
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm build
+      - run: pnpm test -- --coverage --if-present
+      - name: Coverage gate
+        run: |
+          if [ -f coverage/coverage-summary.json ]; then
+            node -e "const s=require('./coverage/coverage-summary.json');const p=s.total.statements.pct; if(p<80){console.error(`Coverage ${p}% < 80%`); process.exit(1)} else {console.log(`Coverage ${p}% >= 80%`)}"
+          else
+            echo "coverage/coverage-summary.json not found; skipping gate"
+          fi
