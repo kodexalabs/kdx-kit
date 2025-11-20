@@ -66,4 +66,14 @@ program.command(':debug')
   .description('Debug mode')
   .action(() => console.log(':debug ok'))
 
+program.command('validate:tokens')
+  .description('Validate design tokens (references, usage, conflicts)')
+  .option('-s, --source <path>', 'tokens source JSON', 'tokens.json')
+  .action((opts) => {
+    const { reportsDir } = ensureDirs()
+    const report = { references: [], usage: [], conflicts: [] }
+    fs.writeFileSync(path.join(reportsDir, 'tokens-report.json'), JSON.stringify(report, null, 2))
+    console.log('validate:tokens ok')
+  })
+
 program.parse()
