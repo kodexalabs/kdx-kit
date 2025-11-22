@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { SmoothScrollProvider } from '@/components/SmoothScrollProvider'
 import './globals.css'
+import './monochrome.css'
+import { ThemeProvider, AssistantUI } from '@kdx-kit/ui'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,9 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SmoothScrollProvider>
-          {children}
-        </SmoothScrollProvider>
+        <ThemeProvider>
+          <SmoothScrollProvider>
+            {children}
+          </SmoothScrollProvider>
+          <AssistantUI />
+        </ThemeProvider>
       </body>
     </html>
   )
